@@ -1,0 +1,645 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"/><meta name="theme-color" content="#222"/><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"/><meta name="renderer" content="webkit"/><link rel="icon" type="image/ico" sizes="32x32" href="/assets/favicon.ico"/><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"/><link rel="alternate" href="/rss.xml" title="Sugarcane" type="application/rss+xml"><link rel="alternate" href="/atom.xml" title="Sugarcane" type="application/atom+xml"><link rel="alternate" type="application/json" title="Sugarcane" href="http://example.com/feed.json"/><link rel="preconnect" href="https://s4.zstatic.net"/><link rel="preconnect" href="https://at.alicdn.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CFredericka%20the%20Great:400,400italic,700,700italic%7CNoto%20Serif%20JP:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CInconsolata:400,400italic,700,700italic&display=swap&subset=latin,latin-ext" media="none" onload="this.media&#x3D;&#39;all&#39;"><link rel="stylesheet" href="/css/app.css?v=0.4.14"><link rel="modulepreload" href="/js/chunk-GH2BBEV4.js"></link><link rel="modulepreload" href="/js/chunk-HI54FJM2.js"></link><link rel="modulepreload" href="/js/chunk-I4M27FP3.js"></link><link rel="modulepreload" href="/js/chunk-VGHRTKYG.js"></link><link rel="modulepreload" href="/js/chunk-WIQECBEN.js"></link><link rel="modulepreload" href="/js/comments-PU2N27CJ.js"></link><link rel="modulepreload" href="/js/copy-tex-S3XCJ3HC.js"></link><link rel="modulepreload" href="/js/index.esm-VYYOTZ2G.js"></link><link rel="modulepreload" href="/js/post-XXBDAFBI.js"></link><link rel="modulepreload" href="/js/quicklink-N3XXJNM4.js"></link><link rel="modulepreload" href="/js/siteInit.js"></link><link rel="modulepreload" href="/js/waline-IBJI4CE3.js"></link><link rel="stylesheet" href="/css/comments-LAB2J3GR.css" media="none" onload="this.media&#x3D;&#39;all&#39;"></link><link rel="stylesheet" href="/css/siteInit.css" media="none" onload="this.media&#x3D;&#39;all&#39;"></link><link rel="stylesheet" href="/css/waline-7JVHAYE3.css" media="none" onload="this.media&#x3D;&#39;all&#39;"></link><link rel="preload" href="https://i.postimg.cc/fRQTQWkJ/IMG-1014.png" as="image" fetchpriority="high"><link rel="preload" href="https://i.postimg.cc/dt6vpRMS/IMG-7474.png" as="image" fetchpriority="high"><link rel="preload" href="https://i.postimg.cc/FHXRfhv5/IMG-7678.png" as="image" fetchpriority="high"><link rel="preload" href="https://i.postimg.cc/mr5gqY9G/IMG-8426.png" as="image" fetchpriority="high"><link rel="preload" href="https://i.postimg.cc/G21DdrgG/wallhaven-vqgzql.png" as="image" fetchpriority="high"><link rel="preload" href="https://i.postimg.cc/NFwBqpfZ/IMG-7516.png" as="image" fetchpriority="high"><meta name="keywords" content="线上赛"/><meta name="description" content="甘蔗🐭🐭的小破站，记录自己的生活~"/><link rel="canonical" href="http://example.com/2024/10/25/%E7%BA%BF%E4%B8%8A%E8%B5%9B/YLCTF2024/"><title>YLCTF2024</title><meta name="generator" content="Hexo 7.3.0"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">YLCTF2024</h1><div class="meta"><span class="item" title="创建时间：2024-10-25 00:00:00"><span class="icon"><i class="ic i-calendar"></i></span><span class="text">发表于</span><time itemprop="dateCreated datePublished" datetime="2024-10-25T00:00:00+08:00">2024-10-25</time></span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i></span><span class="text">本文字数</span><span>25k</span><span class="text">字</span></span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i></span><span class="text">阅读时长</span><span>23 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span><span class="line"></span><span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">甘蔗の农场园</a></li></ul><ul class="right" id="rightNav"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div class="pjax" id="imgs"><ul><li class="item" style="background-image: url(&quot;https://i.postimg.cc/fRQTQWkJ/IMG-1014.png&quot;);"></li><li class="item" style="background-image: url(&quot;https://i.postimg.cc/dt6vpRMS/IMG-7474.png&quot;);"></li><li class="item" style="background-image: url(&quot;https://i.postimg.cc/FHXRfhv5/IMG-7678.png&quot;);"></li><li class="item" style="background-image: url(&quot;https://i.postimg.cc/mr5gqY9G/IMG-8426.png&quot;);"></li><li class="item" style="background-image: url(&quot;https://i.postimg.cc/G21DdrgG/wallhaven-vqgzql.png&quot;);"></li><li class="item" style="background-image: url(&quot;https://i.postimg.cc/NFwBqpfZ/IMG-7516.png&quot;);"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><main><div class="inner"><div class="pjax" id="main"><div class="article wrap"><div class="breadcrumb" itemListElement itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i><span><a href="/">首页</a></span><i class="ic i-angle-right"></i><span class="current" itemprop="itemListElement" itemscope="itemscope" itemtype="https://schema.org/ListItem"><a href="/categories/%E7%BA%BF%E4%B8%8A%E8%B5%9B/" itemprop="item" rel="index" title="分类于线上赛"><span itemprop="name">线上赛<meta itemprop="position" content="0"/></span></a></span></div><article class="post block" itemscope="itemscope" itemtype="http://schema.org/Article" lang="zh-CN"><link itemprop="mainEntityOfPage" href="http://example.com/2024/10/25/%E7%BA%BF%E4%B8%8A%E8%B5%9B/YLCTF2024/"/><span hidden="hidden" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="image" content="/assets/avatar.jpg"/><meta itemprop="name" content="甘蔗"/><meta itemprop="description" content=", 甘蔗🐭🐭的小破站，记录自己的生活~"/></span><span hidden="hidden" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="Sugarcane"/></span><div class="body md" itemprop="articleBody"><h1 id="2024ylctf-wp-misc篇"><a class="anchor" href="#2024ylctf-wp-misc篇">#</a> 2024YLCTF WP MISC 篇</h1>
+<p>原创：源鲁安全实验室</p>
+<p>搬的官方 wp，因为好多题忘了咋解的了...</p>
+<h2 id="round-1"><a class="anchor" href="#round-1">#</a> Round 1</h2>
+<h3 id="乌龟子啦"><a class="anchor" href="#乌龟子啦">#</a> 乌⻳⼦啦</h3>
+<p>拿到⼀串 base64 的编码，观察发现这是⼀个图⽚转 base64 的操作，cyberchef 转成图⽚<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/qhLRHjWq"><img loading="lazy" data-src="https://i.postimg.cc/7hvT7RV3/QQ20241106-093641.png" alt="QQ20241106-093641.png" /></a><br />
+ 然后可以得到⼀张全都是 01 的图⽚，我们⽤ ocr 将它识别出来。</p>
+<p>因为只有 01 所以 ocr 的准确率⽐较⾼，由于图⽚较⻓可考虑分 10 段 ocr 识别。</p>
+<p>由于只有 01 考虑⿊⽩像素，可能是⼆维码，写个脚本转换即可（也可随波逐流 10 字符<br />
+串转图⽚）</p>
+<pre><code>from PIL import Image
+from zlib import *
+import math
+str = &quot;&quot;
+MAX = int(math.sqrt(len(str)))
+print(MAX)
+pic = Image.new(&quot;RGB&quot;,(MAX,MAX))
+i=0
+for y in range(0,MAX):
+ for x in range(0,MAX):
+ if(str[i] == '1'):
+ pic.putpixel([x,y],(0,0,0))
+ else:pic.putpixel([x,y],(255,255,255))
+ i = i+1
+pic.show()
+pic.save(&quot;flag.png&quot;)
+</code></pre>
+<p>得到⼆维码后 扫码即可得到 flag: <strong>YLCTF{f6a6f8cf-c25b-49a8-8f17-c8fbd751faa4}</strong></p>
+<h3 id="hide_png"><a class="anchor" href="#hide_png">#</a> hide_png</h3>
+<p>打开图⽚可以看到，图⽚隐隐约约有⼀个内嵌的图⽚<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/SnCmpgM4"><img loading="lazy" data-src="https://i.postimg.cc/P5FJYcfC/QQ20241106-093847.png" alt="QQ20241106-093847.png" /></a><br />
+ 但是看不出具体是什么，放⼤查看像素的关系，可以发现这样⼀个式⼦【从左上⻆第⼀个点算作 (0,0)，其位置为 (15,64)，最终可得到对应位置的式⼦ (i+5)*3,(j+4)*16】</p>
+<p>需要再统计⼀下，内嵌的这个图⽚的⻓宽像素各有多少【最右下⻆为 (1968,1312) 对应 i j 为 651,78 所以共 652x79 个】，然后编写脚本来读取各个点的像素。</p>
+<pre><code>from PIL import Image
+f = Image.open('./attachments.png')
+img = Image.new(&quot;RGB&quot;, (652,79))
+
+for i in range(650):
+    for j in range(79):
+        t = f.getpixel(((i+5)*3,(j+4)*16))
+        img.putpixel((i,j),(t))
+img.show()
+img.save('output.png')
+</code></pre>
+<h3 id="plain_crack"><a class="anchor" href="#plain_crack">#</a> plain_crack</h3>
+<p>本题使⽤ pyminizip 对⽂件进⾏了加密压缩</p>
+<p>那么明⽂爆破需要⼀个压缩类型⼀样且压缩后 crc32 ⼀样的 zip 才可以进⾏爆破</p>
+<pre><code># -*- coding:utf8 -*-
+import pyminizip
+from hashlib import md5
+import os
+
+def create(files, zfile):
+    pyminizip.compress_multiple(files,[], zfile, None, 0)
+    pass
+if __name__ == '__main__':
+    files = ['build.py']
+    zfile = 'build.zip'
+    create(files, zfile)
+</code></pre>
+<p><a href="http://xn--build-312dmtm91rjiak8de3xy46bfnnph3f6cgx99d.py">所以⽤上⾯这个脚本压缩 build.py</a>，然后再⽤ ARCHRP 进⾏明⽂爆破即可</p>
+<p>明⽂爆破可能会出现跑很久，然后说没找到⼝令，但实际上停⽌后就可以直接另存为<br />
+解密后的压缩包了。<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/bGVCVhww"><img loading="lazy" data-src="https://i.postimg.cc/mDBvDZxC/QQ20241106-094222.png" alt="QQ20241106-094222.png" /></a><br />
+ 然后下⼀个知识点是 word ⽂件实际上可以看作是 zip ⽂件，改个后缀，查看⼀下 media<br />
+ ⽂件夹 ⾥⾯就有 flag 的图⽚了。<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/4Yqwp1LY"><img loading="lazy" data-src="https://i.postimg.cc/1z5ThCDr/QQ20241106-094341.png" alt="QQ20241106-094341.png" /></a></p>
+<h3 id="pngorzip"><a class="anchor" href="#pngorzip">#</a> pngorzip</h3>
+<p>这题的主要思路是 lsb 图⽚隐写，需要借助到 stegsolve ⼯具来查看隐写<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/ZC0rjdyp"><img loading="lazy" data-src="https://i.postimg.cc/VLWDf9fG/QQ20241106-094526.png" alt="QQ20241106-094526.png" /></a><br />
+ 直接查看 RGB 三通道的 lsb，可以发现存在⼀个 PK 头，应该是个压缩包，给他 save bin<br />
+ 出来。但是压缩包有密码，查看到压缩包的描述有⼀个 hint。<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/5jKzH2k0"><img loading="lazy" data-src="https://i.postimg.cc/J4M52yNb/QQ20241106-094600.png" alt="QQ20241106-094600.png" /></a><br />
+ 考虑到可能是掩码爆破，使⽤<strong> ARCHPR</strong> 的掩码爆破就可以解密出压缩包密码了 <code>114514giao</code> ，查看 txt 得到 flag： <strong>YLCTF{d359d6e4-740a-49cf-83eb-5b0308f09c8c}</strong></p>
+<h3 id="whatmusic"><a class="anchor" href="#whatmusic">#</a> whatmusic</h3>
+<p>拿到⼀个有密码的压缩包，压缩包⾥⾯有⼀个<strong> password</strong> 的⽂件。</p>
+<p>我们拖进 010 中查看，发现⽂件的最末尾有 PNG% 的倒置，考虑可能是 byte 翻转，写脚<br />
+本翻转回来，或者厨子里面也有工具。</p>
+<pre><code>def reverse_byte_data(image_path, output_path):
+    # 读取图⽚的⼆进制数据
+    with open(image_path, 'rb') as file:
+        byte_data = file.read()
+        
+    # 翻转⼆进制数据流
+    reversed_byte_data = bytearray(reversed(byte_data))
+    
+    # 将翻转后的⼆进制数据流写⼊新的⽂件
+    with open(output_path, 'wb') as file:
+        file.write(reversed_byte_data)
+        
+if __name__ == &quot;__main__&quot;:
+    import sys
+    if len(sys.argv) != 3:
+       print(&quot;Usage: python reverse_byte_data.py &lt;input_image_path&gt; &lt;output_image_path&gt;&quot;)
+       sys.exit(1)
+       
+    input_image_path = sys.argv[1]
+    output_image_path = sys.argv[2]
+    reverse_byte_data(input_image_path, output_image_path)
+    print(f&quot;Image byte data reversed and saved to &#123;output_image_path&#125;&quot;)
+</code></pre>
+<p>byte 翻转回来后，图⽚只有的宽只有 0x15 像素，考虑可能被隐藏了宽，我们到 010 中修改宽度即可。然后图⽚是镜像的，还需要写脚本镜像回来，不然很难看懂。这里方法很多，不过留一个脚本吧。</p>
+<pre><code>from PIL import Image
+
+def flip_image(image_path, output_path):
+    # 打开图⽚
+    with Image.open(image_path) as img:
+        # ⽔平翻转图⽚（镜像）
+        flipped_img = img.transpose(Image.FLIP_LEFT_RIGHT)
+        
+        # 保存翻转后的图⽚
+        flipped_img.save(output_path)
+        
+if __name__ == &quot;__main__&quot;:
+    import sys
+    if len(sys.argv) != 3:
+        print(&quot;Usage: python flip_image.py &lt;input_image_path&gt; &lt;output_image_path&gt;&quot;)
+        sys.exit(1)
+        
+    input_image_path = sys.argv[1]
+    output_image_path = sys.argv[2]
+    
+    flip_image(input_image_path, output_image_path)
+    print(f&quot;Image flipped and saved to &#123;output_image_path&#125;&quot;)
+</code></pre>
+<p>这样就得到了压缩包的密码  <code>&amp;*asdsaxc141123123xcoaa#</code> <br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/877g1tfc"><img loading="lazy" data-src="https://i.postimg.cc/T39dJsRV/QQ20241106-095326.png" alt="QQ20241106-095326.png" /></a><br />
+ 打开压缩包后，还是把 flag 拖进 010 中，根据 hint1 的提示，看到 lyra 字眼，这是 <a target="_blank" rel="noopener" href="https://github.com/google/lyra">google 的⼀个压缩⾳频的项⽬</a>。</p>
+<p>有相关脚本，kali 里面可以解，然后利⽤以下命令进⾏解密即可。</p>
+<p><code>bazel-bin/lyra/cli_example/decoder_main --encoded_path=$HOME/temp/flag.lyra --o utput_dir=$HOME/temp/</code></p>
+<p>得到⼀段⾳频后，发现他念了⼀串东⻄，⽽且语速有点快，考虑可以使⽤语⾳识别等操作。通过 0.25 倍速或 0.5 倍速听可得到 YLCTF 的 flag。</p>
+<h3 id="trafficdet"><a class="anchor" href="#trafficdet">#</a> trafficdet</h3>
+<p>本题为恶意流量分类识别</p>
+<p>因为给的 train 有⼀点点太全了，稍微拟合于 test，所以采⽤了 99% 的 acc 作为判断，如果⽤ f1 的话有点离散了，不太合适。</p>
+<p>有很多的算法可以⽤于流量分类，但是由于数据⽐较多，选⽤随机森林算法处理这类问题实际上会⽐深度学习的⽅法好很多，所以可以使⽤ sklearn 的随机森林库进⾏建模，然后⾃⼰⼿动筛出掉⼀些⽆⽤特征即可。</p>
+<p>如果发现 acc 可能差的不多，可以调整⼀下决策树数量，虽然⼀般来说越多决策树越好，但是对于 0.001%~0.01% 级别的 acc 来说，使⽤越⼤的决策树可能会导致 acc 降低。包括随机数 seed 和训练的时候的分割⽐例等。</p>
+<pre><code>import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder, PolynomialFeatures
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
+import joblib
+data = pd.read_csv('train.csv')
+for col in data.columns:
+    if data[col].dtype == 'object' and data[col].name != 'Label':
+        le = LabelEncoder()
+        data[col] = le.fit_transform(data[col])
+X = data.drop(columns=&quot;Label&quot;,axis=1)
+y = data['Label']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, rando
+m_state=613)
+rf = RandomForestClassifier(n_estimators=1500, random_state=531,n_jobs=-1)
+rf.fit(X_train, y_train)
+y_pred = rf.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print('Accuracy:', accuracy)
+joblib.dump(rf, 'rf_model.pkl')
+</code></pre>
+<pre><code>import pandas as pd
+from sklearn.preprocessing import LabelEncoder, PolynomialFeat
+ures
+from sklearn.ensemble import RandomForestClassifier
+import joblib
+rf = joblib.load('rf_model.pkl')
+test_data = pd.read_csv('test.csv',encoding=&quot;utf-8&quot;)
+for col in test_data.columns:
+    if test_data[col].dtype == 'object':
+    le = LabelEncoder()
+    test_data[col] = le.fit_transform(test_data[col])
+    
+predictions = rf.predict(test_data)
+pred = pd.DataFrame(predictions, columns=['Label'])
+pred.insert(0, 'id', range(1, len(pred) + 1))
+pred.to_csv('predictions.csv', index=False)
+</code></pre>
+<h3 id="sincostan"><a class="anchor" href="#sincostan">#</a> SinCosTan</h3>
+<p>下载附件后，010 打开发现是个 wav ⽂件，根据题⽬提示的 SinCosTanOrd，猜测需要把⾳频⾥的 ascii 数据给提取出来</p>
+<p>例如 png 图像⽂件为  <code>89504b</code>  转换后为  <code>565753485298</code>  ，zip 压缩包⽂件为  <code>504b0304</code>  转换 后为  <code>534852664851</code></p>
+<p>有了思路后编写 Python 脚本</p>
+<pre><code>from scipy.io import wavfile
+samplerate, data = wavfile.read('flag.wav')
+
+for i in range(len(data)):
+    if 53 == data[i] and 48 == data[i+1] and 52 == data[i+2] and 66 == data[i+3] and 48 == data[i+4] and 51 == data[i+5]:
+        print(&quot;zip: &quot; + str(i))
+    if 56 == data[i] and 57 == data[i+1] and 53 == data[i+2] and 48 == data[i+3] and 52 == data[i+4] and 101 == data[[i+5]]:
+        print(&quot;image: &quot; + str(i))
+</code></pre>
+<p>定位数据位置，得到（每个⼈的数据位置都是不⼀样的）</p>
+<pre><code>with open(&quot;flag_output.zip&quot;, &quot;wb&quot;) as f:
+    hex_string = &quot;&quot;
+    try:
+        for i in range(zip, zip+478):
+            hex_value = chr(int(data[i]))
+            hex_string += hex_value
+        binary_data = bytes.fromhex(hex_string)
+        f.write(binary_data)
+    except ValueError as e:
+        print(f&quot;&#123;len(hex_string)&#125;&quot;)
+        
+with open(&quot;flag_output.png&quot;, &quot;wb&quot;) as f:
+    for i in range(image1, image1+325878):
+        hex_value = chr(int(data[i]))
+        print(hex_value, end = &quot;&quot;)
+        
+with open(&quot;flag_watermark_output.png&quot;, &quot;wb&quot;) as f:
+    hex_string = &quot;&quot;
+    try:
+        for i in range(image2, image2+84562):
+            hex_value = chr(int(data[i]))
+            hex_string += hex_value
+        binary_data = bytes.fromhex(hex_string)
+        f.write(binary_data)
+    except ValueError as e:
+        print(f&quot;&#123;len(hex_string)&#125;&quot;)
+</code></pre>
+<p>接着把所有数据给提取出来，得到下⾯⼏个⽂件。<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/c6MNgchM"><img loading="lazy" data-src="https://i.postimg.cc/v8C8Kq6j/QQ20241106-100507.png" alt="QQ20241106-100507.png" /></a><br />
+hint 内容为宽零隐写，告知盲⽔印的种⼦为  <code>114514</code> <br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/8sshsyNx"><img loading="lazy" data-src="https://i.postimg.cc/dQjnHXXQ/QQ20241106-100600.png" alt="QQ20241106-100600.png" /></a><br />
+ 得知 seed 后，去解⼀下盲⽔印即可，羊驼也行。</p>
+<p><code>python3 bwmforpy3.py decode flag_output.png flag_watermark_output.png flag.png --seed 114514</code></p>
+<p><a target="_blank" rel="noopener" href="https://postimg.cc/yg2WDyTz"><img loading="lazy" data-src="https://i.postimg.cc/2ySWXHb3/QQ20241106-100717.png" alt="QQ20241106-100717.png" /></a></p>
+<h2 id="round-2"><a class="anchor" href="#round-2">#</a> Round 2</h2>
+<h3 id="滴答滴"><a class="anchor" href="#滴答滴">#</a> 滴答滴</h3>
+<p>使⽤ 010 打开⽂件可以发现全部都是 00 和 FF，⼀般来说这是可以⽤于表示电平信号，但是问题是不知道信号的编码是什么。</p>
+<p>由于题⽬描述给了  <code>man~</code>  ，所以可以尝试⼀下曼切斯特编码来表示。</p>
+<pre><code>def read_from_file(filename):
+    # 从⽂件中读取⼆进制数据
+    with open(filename, 'rb') as file:
+        return file.read()
+        
+def manchester_to_binary(manchester_data):
+    # 将曼切斯特编码的数据转换回⼆进制字符串
+    binary_str = ''
+    i = 0
+    while i &lt; len(manchester_data):
+        if manchester_data[i] == 0 and manchester_data[i+1] ==255:
+            binary_str += '0'
+        elif manchester_data[i] == 255 and manchester_data[i+1] == 0:
+            binary_str += '1'
+        i += 2 # 每次处理两个字节
+    return binary_str
+
+def binary_to_char(binary_str):
+    # 将⼆进制字符串转换回ASCII字符
+    return ''.join([chr(int(binary_str[i:i+8], 2)) for i in range(0, len(binary_str), 8)])
+    
+# 示例使⽤
+filename = &quot;attachment&quot; # 输⼊⽂件名
+manchester_data = read_from_file(filename)
+binary_str = manchester_to_binary(manchester_data)
+print(binary_str)
+ascii_str = binary_to_char(binary_str)
+
+print(f&quot;解码后的ASCII字符串: &#123;ascii_str&#125;&quot;)
+
+# 解码后的ASCII字符串: YLCTF&#123;7d160084-4dd5-4eec-bf1f-12f3ad8c8a6b&#125;
+</code></pre>
+<h3 id="听~"><a class="anchor" href="#听~">#</a> 听～</h3>
+<p>下载题⽬附件发现为  <code>wav</code>  ⽂件，猜测考点为 wav 隐写，通过 audacity 观察波形、频谱并没有发现其它内容。考虑利⽤  <code>DeepSound</code>  进⾏解压，发现⼀个压缩包，结果如下：<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/JGWsNKjT"><img loading="lazy" data-src="https://i.postimg.cc/dthGKx3K/QQ20241106-101229.png" alt="QQ20241106-101229.png" /></a><br />
+ 该压缩包存在加密，通过爆破得到压缩包⼝令，如下图：<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/fSb06fv4"><img loading="lazy" data-src="https://i.postimg.cc/4y6bH873/QQ20241106-101315.png" alt="QQ20241106-101315.png" /></a><br />
+ 解压发现存在⼀张图⽚，发现为 png 图⽚，利⽤  <code>StegSolve</code>  进⾏分析，发现存在以下信息：<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/H8CTMYV6"><img loading="lazy" data-src="https://i.postimg.cc/C5R5WdYp/QQ20241106-101356.png" alt="QQ20241106-101356.png" /></a><br />
+ 判断为 lsb 隐写，那么利⽤  <code>data extract</code>  功能，选取如下：<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/3dfJSH6x"><img loading="lazy" data-src="https://i.postimg.cc/W1TF4Nwg/QQ20241106-101432.png" alt="QQ20241106-101432.png" /></a></p>
+<h3 id="trace"><a class="anchor" href="#trace">#</a> Trace</h3>
+<p>通过  <code>010editor</code>  打开附件 发现结尾为<strong> base64</strong> 编码的数据，复制后进⾏解码<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/MvqQ2xd0"><img loading="lazy" data-src="https://i.postimg.cc/4Nhbcxc0/QQ20241106-101634.png" alt="QQ20241106-101634.png" /></a><br />
+ 复制解码后发现为<strong> rar</strong> 压缩包<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/zLZL7rbR"><img loading="lazy" data-src="https://i.postimg.cc/YSj1p2t8/QQ20241106-101745.png" alt="QQ20241106-101745.png" /></a><br />
+ 通过  <code>rar2john</code>  获取 hash 值后，利⽤ hashcat 进⾏解密，如下图：<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/hzKXF10D"><img loading="lazy" data-src="https://i.postimg.cc/V6CnC7rC/QQ20241106-101836.png" alt="QQ20241106-101836.png" /></a><br />
+ 根据题⽬提示密码为<strong> 6 位</strong>爆破得到如下结果：<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/s16v8SGz"><img loading="lazy" data-src="https://i.postimg.cc/fTZmVfwV/QQ20241106-101926.png" alt="QQ20241106-101926.png" /></a><br />
+ 解压压缩包，得到⼀张图⽚，观察图⽚内容发现该形式类似于猫脸变换，利⽤脚本:</p>
+<pre><code>def arnold_encode(image, shuffle_times=10, a=1, b=1, mode='1'):
+
+    image = np.array(image)
+    arnold_image = np.zeros(shape=image.shape, dtype=image.dtype)
+    h, w = image.shape[0], image.shape[1]
+    N = h
+    for _ in range(shuffle_times):
+        for ori_x in range(h):
+            for ori_y in range(w):
+                new_x = (1*ori_x + b*ori_y)% N
+                new_y = (a*ori_x + (a*b+1)*ori_y) % N
+                if mode == '1':
+                    arnold_image[new_x, new_y] = image[ori_x, ori_y]
+                else:
+                    arnold_image[new_x, new_y, :] = image[ori_x, ori_y, :]
+    return Image.fromarray(arnold_image)
+
+import numpy as np
+from PIL import Image
+
+def arnold_decode(image, shuffle_times=10, a=1, b=1, mode='1'):
+
+    image = np.array(image)
+    decode_image = np.zeros(shape=image.shape, dtype=image.dtype)
+    h, w = image.shape[0], image.shape[1]
+    N = h
+    for _ in range(shuffle_times):
+        for ori_x in range(h):
+            for ori_y in range(w):
+            new_x = ((a*b+1)*ori_x + (-b)* ori_y)% N
+            new_y = ((-a)*ori_x + ori_y) % N
+            if mode == '1':
+                decode_image[new_x, new_y] = image[ori_x, ori_y]
+            else:
+                decode_image[new_x, new_y, :] = image[ori_x, ori_y, :]
+    return Image.fromarray(decode_image)
+    
+img = Image.open('flag.png')
+decode_img = arnold_decode(img)
+decode_img.save('flag-output.png')
+</code></pre>
+<h3 id="imgai"><a class="anchor" href="#imgai">#</a> IMGAI</h3>
+<p>本题是 MISNT ⼿写图像数据集，题⽬的问题在于标签⽜头不对⻢嘴。</p>
+<p><code>mapping = &#123;1: 7, 2: 3, 4: 5, 6: 9, 8: 0,7:1,3:2,5:4,9:6,0:8&#125;</code></p>
+<p>按照这个替换表来实现数据替换。</p>
+<p>远程服务端实现了⼀个图⽚输出的功能，将 36 张 640x480 的图⽚输出成 2 进制。</p>
+<p>所以需要通过 pwntools 的 recv 来读取⼆进制信息，再通过 PIL 将⼆进制信息转换成图⽚，再将图⽚进⾏预测，最后使⽤ pwntools 的 sendline 与终端进⾏交互。</p>
+<p>给出了⼀个 CNN 定义，需要将这个定义写⼊ test 脚本中，后⾯直接利⽤ model.pth 进⾏预测就⾏了。</p>
+<pre><code>import torch
+import torch.nn as nn
+from PIL import Image
+from torchvision import transforms
+import numpy as np
+from pwn import *
+
+# 定义与训练时相同的CNN模型
+class MNISTCNN(nn.Module):
+    def __init__(self):
+        super(MNISTCNN, self).__init__()
+        self.conv1 = nn.Conv2d(1, 32, kernel_size=5, padding=2)
+        self.pool = nn.MaxPool2d(2, 2)
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=5)
+        self.fc1 = nn.Linear(64 * 5 * 5, 1024)
+        self.fc2 = nn.Linear(1024, 10)
+        self.relu = nn.ReLU()
+        
+    def forward(self, x):
+        x = self.pool(self.relu(self.conv1(x)))
+        x = self.pool(self.relu(self.conv2(x)))
+        x = x.view(-1, 64 * 5 * 5) # 展平
+        x = self.relu(self.fc1(x))
+        x = self.fc2(x)
+        return x
+        
+# 加载模型权重
+model = MNISTCNN()
+model.load_state_dict(torch.load('model.pth'))
+model.eval()
+
+# 定义变换
+transform = transforms.Compose([
+    transforms.Resize((28, 28)),
+    transforms.ToTensor(),
+    transforms.Normalize((0.1307,), (0.3081,))])
+    
+# 预测图像
+def predict_image(image_path, model, transform):
+    image = Image.open(image_path).convert('L') # 转换为灰度图像
+    image = transform(image).unsqueeze(0) # 增加批处理维度
+    with torch.no_grad():
+    outputs = model(image)_, predicted = torch.max(outputs, 1)
+    return predicted.item()
+    
+def binary_to_image(binary_str, width, height):
+
+    if len(binary_str) != width * height:
+        raise ValueError(&quot;字符串⻓度与图像尺⼨不匹配&quot;)
+        
+    img = Image.new('1', (width, height))
+    binary_array = np.array(list(binary_str), dtype=np.uint8)
+    binary_array = binary_array.reshape((height, width))
+    
+    pixels = img.load()
+    for i in range(height):
+        for j in range(width):
+            pixels[j, i] = 255 if binary_array[i, j] == 1 else 0
+    return img
+    
+io = remote(&quot;challenge.yuanloo.com&quot;,28396)
+io.recvuntil(&quot;Welcome to YLCTF,please guess number\n&quot;)
+for i in range(1,37):
+
+    mess = io.recvuntil(f&quot;i&quot;)
+    mess = str(mess)[2:-4]
+    recovered_img = binary_to_image(mess, 640, 480)
+    recovered_img.save(&quot;1.png&quot;)
+    predicted_label = predict_image(&quot;1.png&quot;, model, transform)
+    key = &quot;&quot;
+    key += str(predicted_label)
+    print(i)
+    io.recvuntil(&quot;\n&quot;)
+    io.sendline(str(predicted_label))
+print(key)
+io.interactive()
+</code></pre>
+<h3 id="liteos"><a class="anchor" href="#liteos">#</a> LiteOS</h3>
+<p>开局⼀个<strong> wav</strong>，<strong>DeepSound</strong> 隐写<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/KKRYSG2m"><img loading="lazy" data-src="https://i.postimg.cc/6Qh4Zqb4/QQ20241113-095647.png" alt="QQ20241113-095647.png" /></a><br />
+ 将所有数据⽂件提取出来<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/dL6QhkQq"><img loading="lazy" data-src="https://i.postimg.cc/7Z85Q0pT/QQ20241113-095733.png" alt="QQ20241113-095733.png" /></a><br />
+secret 为⼀个 pdu ⽂件，需要编写 7 ⽐特位解码程序</p>
+<pre><code>codes = '''84d184584c1a4587118b084c1b3987118b084c1bb587118b084
+c1a3260
+87118b084c1b3987118b086d983660c1cb0830a1b660d983172c21c460
+86d983660c9cb08b1a1b660d983372c18b28515ab26f0e14660c1c3060
+84e58b060c233382d214560c1cb07105834851583070c1c41630d9b060
+86cdc38630e2c28d1614560c1c30830d9c360c1bb460d21c462c22c260
+8cde1b3690a336831a2b888d1c326505bb46d1224272ce345850d93760
+72d9ab162c58396d09b3764d1a3766d19b970d99356915b4260d5a3660
+68e5bc38ae183288ca23766ddc458909bc26f15a428ce5c368715a4160
+8ac1cb060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c183060c183060
+60c183060c183060c183060c183060c183060c183060c18306ad60c160'''
+def from_hex(s):
+    b_str = ''.join(format(int(s[i:i+2], 16), '08b') for i in
+range(0, len(s), 2))
+    return b_str.rstrip('0')
+def from_bit(s):
+    d_str = ''.join(chr(int(s[i:i+7], 2)) for i in range(0, le
+n(s), 7))
+    return d_str
+    
+for code in codes.split('\n'):
+    code_bit = from_hex(code)
+    code_text = from_bit(code_bit)
+    print(code_text)
+
+</code></pre>
+<p>脚本解密完后得到的是⼀个⼆进制⽂件，另存为 os.bin<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/yD5DNgnD"><img loading="lazy" data-src="https://i.postimg.cc/KYcBJtMD/QQ20241113-095932.png" alt="QQ20241113-095932.png" /></a><br />
+qemu 搭配 gdb 起个远程调试<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/hJWKw9p1"><img loading="lazy" data-src="https://i.postimg.cc/yNWWDjRt/QQ20241113-100016.png" alt="QQ20241113-100016.png" /></a><br />
+ 下断点到 0x7c00，接着反汇编</p>
+<pre><code>(gdb) break *0x7c00
+Breakpoint 1 at 0x7c00
+(gdb) c 
+Continuing.
+
+Breakpoint 1，0x00007c00 in ?? ()
+(gdb) disassemble 0x7c00, 0x9d00
+</code></pre>
+<p>查看寄存器<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/8FDqMwZ9"><img loading="lazy" data-src="https://i.postimg.cc/HL7dGhXY/QQ20241113-100239.png" alt="QQ20241113-100239.png" /></a><br />
+ 发现 0x8000 地址开始有数据，提取出来</p>
+<p><code>x/10bx 0x8000</code></p>
+<p><a target="_blank" rel="noopener" href="https://postimg.cc/Hcnv9NXZ"><img loading="lazy" data-src="https://i.postimg.cc/bJ9XpcJh/QQ20241113-100346.png" alt="QQ20241113-100346.png" /></a><br />
+ 得到</p>
+<pre><code>4B F6 AF E8 D4 82 2A 74 6D DB 93 FE BC 27 96 51
+11 09 6B 67 24 47 34 39 86 25 4E 6B 05 46 49 7C
+E8 02 D2 D7 37 8E DB 7B 7E 4B F9 86 CE 4A E0 90
+</code></pre>
+<p>接着 IDA 打开 main 程序，将⾥边的 key 提取出来<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/xcv5MQBj"><img loading="lazy" data-src="https://i.postimg.cc/Fsq6tsZS/QQ20241113-100831.png" alt="QQ20241113-100831.png" /></a><br />
+ 编写脚本解密 AES 即可</p>
+<pre><code>from Crypto.Cipher import AES
+import binascii
+key1 = 0x6624C95E3420CB4A
+key2 = 0x7A0A66FBD2898B0A
+key = key1.to_bytes(8, byteorder='little') + key2.to_bytes(8, byteorder='little')
+flag = '4bf6afe8d4822a746ddb93febc27965111096b672447343986254e6b0546497ce802d2d7378edb7b7e4bf986ce4ae090'
+flag = binascii.unhexlify(flag)
+cipher = AES.new(key, AES.MODE_ECB)
+flag = cipher.decrypt(flag)
+print(flag)
+</code></pre>
+<h2 id="round-3"><a class="anchor" href="#round-3">#</a> Round 3</h2>
+<h3 id="blackdoor"><a class="anchor" href="#blackdoor">#</a> Blackdoor</h3>
+<p>签到题，解压后<strong>⽕绒或 D 盾</strong>直接查杀到<strong> include.php</strong> 存在⽊⻢，打开找到<strong> password</strong> 即为 flag</p>
+<h3 id="tinted"><a class="anchor" href="#tinted">#</a> Tinted</h3>
+<p>附件提供了⼀张图⽚，上⾯有很多标有颜⾊的⼩点，根据上⾯的颜⾊，猜测可能是关于⾊彩代码的隐写，根据这个思路利⽤取⾊器。<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/gxcVhZv4"><img loading="lazy" data-src="https://i.postimg.cc/rwxQvGz6/QQ20241113-101102.png" alt="QQ20241113-101102.png" /></a><br />
+ 由于上⾯是随机颜⾊，获取完成之后，结果如下：</p>
+<pre><code>#040067,#ff0065,#ff0072,#040049,#ff3c66,#ff004a,#ff3c6a,#ff3c42,#ff3c52,
+#ff3c5a,#ff0066,#00ff31,#ff0052,#040067,#040062,#040074,#ff0052,#ff004c,
+#ff0052,#ff0039,#ff0054,#ff0064,#ff004a,#ff0075,#00ff52,#040063,#040075,
+#040075,#00ff53,#00ff74,#ff0057,#00ff75,#ff0051,#040067,#ff004a,#ff0074,
+#ff0069,#ff3c5a,#ff0057,#00ff39,#ff0054,#ff0067,#00ff4a,#ff3c7a,#040054,
+#ff0064,#ff0052,#ff3c76,#040054,#ff004c,#ff0069,#ff0075,#00ff52,#040074,
+#ff3c62,#00ff71,#00ff70,#00ff62,#ff0035,#040035 
+</code></pre>
+<p>根据上述的颜⾊代码进⾏分析，发现在最后两位存在问题，可以通过 16 进制转换，编写脚本进⾏提取，代码如下：</p>
+<pre><code>import binascii
+a = ['#040067', '#ff0065', '#ff0072', '#040049', '#ff3c66', '#ff004a', '#ff3c6a', '#ff3c42', '#ff3c52', '#ff3c5a',
+ '#ff0066', '#00ff31', '#ff0052', '#040067', '#040062', '#040074', '#ff0052', '#ff004c', '#ff0052', '#ff0039',
+ '#ff0054', '#ff0064', '#ff004a', '#ff0075', '#00ff52', '#040063', '#040075', '#040075', '#00ff53', '#00ff74',
+ '#ff0057', '#00ff75', '#ff0051', '#040067', '#ff004a', '#ff0074', '#ff0069', '#ff3c5a', '#ff0057', '#00ff39',
+ '#ff0054', '#ff0067', '#00ff4a', '#ff3c7a', '#040054', '#ff0064', '#ff0052', '#ff3c76', '#040054', '#ff004c',
+ '#ff0069', '#ff0075', '#00ff52', '#040074', '#ff3c62', '#00ff71', '#00ff70', '#00ff62', '#ff0035', '#040035']
+ 
+ res = ''
+for i in a:
+    # print(i, i[5:])
+    res += i[5:]
+print(binascii.unhexlify(res))
+</code></pre>
+<p>得到字符串：</p>
+<p><code>gerIfJjBRZf1RgbtRLR9TdJuRcuuStWuQgJtiZW9TgJzTdRvTLiuRtbqpb55</code></p>
+<p>判断以上为某⼀种编码类型，经过 fuzz 测试可以得到为 base64 换表且为 CyberChef 的默认表。<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/fVhwqcHj"><img loading="lazy" data-src="https://i.postimg.cc/138ftMwT/QQ20241113-102106.png" alt="QQ20241113-102106.png" /></a></p>
+<h3 id="figure"><a class="anchor" href="#figure">#</a> figure</h3>
+<p>提供了⼀个⽂件，打开发现⾥⾯就是⼀⼤堆数据，如下图：<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/Rq64MsyL"><img loading="lazy" data-src="https://i.postimg.cc/RCGFL2Ty/QQ20241113-102214.png" alt="QQ20241113-102214.png" /></a><br />
+ 观察最后⾯的数据，发现存在类似于 png ⽂件头的格式，对该数据进⾏反转，并写⼊到⽂件中保存为 png ，发现为⼀张折线图：<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/rK5T4d8d"><img loading="lazy" data-src="https://i.postimg.cc/m25g0MJS/QQ20241113-102250.png" alt="QQ20241113-102250.png" /></a><br />
+ 图中标注了点的坐标与序号，对其进⾏摘抄，发现如下：</p>
+<pre><code>[(52, 50), (83, 115), (102, 120), (82, 68), (121, 86), (76, 122), (106, 77), 
+(112, 84), (69, 106), (74, 99), (102, 105), (106, 84), (105, 107), (119, 120), 
+(78, 71), (101, 106), (71, 120), (66, 112), (119, 57), (87, 49), (49, 82), (115,66), 
+(55, 71), (113, 65), (114, 89), (116, 77), (111, 103), (68, 84), (88, 89),
+(100, 76), (72, 56), (107, 90), (109, 102), (85, 101), (104, 51), (85, 109), (81, 89)]
+</code></pre>
+<p>结合判断这⾥应该要考察的是坐标隐写，x 坐标为前⼀半数据，y 坐标为后⼀半数据整合⼀下，然后在利⽤ ascii 进⾏转换，结果如下：</p>
+<p><code>4SfRyLjpEJfjiwNeGBwW1s7qrtoDXdHkmUhUQYm3efZ8LYTgMYAGBR19pxjGxkTicjTMzVDxs2</code></p>
+<p>对上述的字符串在进⾏分析，发现为栅栏加密（hint2）：<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/7fncDSHN"><img loading="lazy" data-src="https://i.postimg.cc/kX0dQyLL/QQ20241113-102516.png" alt="QQ20241113-102516.png" /></a><br />
+ 在进⾏以下解密得到 flag:<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/vgnqKV2f"><img loading="lazy" data-src="https://i.postimg.cc/gJSCnyvS/QQ20241113-102601.png" alt="QQ20241113-102601.png" /></a></p>
+<h3 id="checkimg"><a class="anchor" href="#checkimg">#</a> CheckImg</h3>
+<p>开局⼀张图，仔细查看发现 Red plane 0 通道有明显隐写。<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/4HkfCpfg"><img loading="lazy" data-src="https://i.postimg.cc/Gt9Hyj6H/QQ20241113-103914.png" alt="QQ20241113-103914.png" /></a><br />
+Green plane 0 给了提示，注意细节<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/wtFzfnPD"><img loading="lazy" data-src="https://i.postimg.cc/1t1ztQr7/QQ20241113-105527.png" alt="QQ20241113-105527.png" /></a><br />
+ 先把 Red plane 0 通道的数据给提取出来<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/yJ8tdxQS"><img loading="lazy" data-src="https://i.postimg.cc/Xvfbsy9x/QQ20241113-105844.png" alt="QQ20241113-105844.png" /></a><br />
+ 检查隐写的数据，发现是以俩位俩位的转<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/BLxTfcT5"><img loading="lazy" data-src="https://i.postimg.cc/DZNBsxmN/QQ20241113-110108.png" alt="QQ20241113-110108.png" /></a><br />
+ 写个脚本反转⼀下:</p>
+<pre><code>def reverse_string(s):
+    s = list(s)
+    for i in range(0, len(s), 4):
+        s[i:i+4] = s[i:i+4][::-1]
+    return ''.join(s)  
+f = open('data.txt', 'rb')
+data = f.read().decode('utf-8')
+print(reverse_string(data))
+</code></pre>
+<p>导入到 010 恢复成 png，得到另⼀张图⽚<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/SnJtF3JW"><img loading="lazy" data-src="https://i.postimg.cc/8zH8WVGn/QQ20241113-110258.png" alt="QQ20241113-110258.png" /></a><br />
+ 很明显可以看出图⽚对 IDAT 块进⾏了隐写，使⽤<strong> zsteg</strong> 查看图⽚隐写的数据，得到 DNA 编码<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/fkRcrX3d"><img loading="lazy" data-src="https://i.postimg.cc/NG1dLkBd/QQ20241113-110729.png" alt="QQ20241113-110729.png" /></a></p>
+<pre><code>import sys
+bin_dna = &#123;'00':'A','10':'C','01':'G','11':'T'&#125;
+mapping = &#123;
+ 'AAA':'a','AAC':'b','AAG':'c','AAT':'d','ACA':'e','ACC':'f', 'ACG':'g',
+ 'ACT':'h','AGA':'i','AGC':'j','AGG':'k','AGT':'l','ATA':'m','ATC':'n','ATG':'o',
+ 'ATT':'p','CAA':'q','CAC':'r','CAG':'s','CAT':'t','CCA':'u','CCC':'v','CCG':'w',
+ 'CCT':'x','CGA':'y','CGC':'z','CGG':'A','CGT':'B','CTA':'C','CTC':'D','CTG':'E',
+ 'CTT':'F','GAA':'G','GAC':'H','GAG':'I','GAT':'J','GCA':'K','GCC':'L','GCG':'M',
+ 'GCT':'N','GGA':'O','GGC':'P','GGG':'Q','GGT':'R','GTA':'S','GTC':'T','GTG':'U',
+ 'GTT':'V','TAA':'W','TAC':'X','TAG':'Y','TAT':'Z','TCA':'1','TCC':'2','TCG':'3',
+ 'TCT':'4','TGA':'5','TGC':'6','TGG':'7','TGT':'8','TTA':'9','TTC':'0','TTG':' ',
+ 'TTT':'.'&#125;
+def bin_2_code(string):
+    string = string.replace(&quot; &quot;,&quot;&quot;)
+    string = string.replace(&quot;\n&quot;,&quot;&quot;)
+    final=&quot;&quot;
+    for j in range(0,len(string),2):
+        final+=bin_dna[string[j:j+2]]
+    return final
+    
+def decode_dna(string):
+    final=&quot;&quot;
+    for i in range(0,len(string),3):
+        final+=mapping[string[i:i+3]]
+    return final
+print(decode_dna(&quot;GCAGTTCTGCTGGGGGGTGTACTAGAGTGACTCGTTGCAGTTGTATACGCATATCTGGTGG
+GGGTATCCCTTGATCGTGCACTGTCCTAAGCAGCAGAAGAGTCCCTGGCAGCTCTATAAGATCTTCTAGTGGGGGCTGT
+AGCAGAGGTTCGGGTTGAGGCTCGTGTCGCAGTTGCACTGTCCGTCTATGTGGCAGTTGACGTGTAAGGTTATTAAGAA
+GGTGAGGTTGTAGTTGTAGCTGATTATGATCTTGAGGGGGCAGCTGAGTATGCCCTCGAGGCTGCAGACGATGGGTCCC
+TTGTAGGGGCATAAGATGTTCGTGTGGTAGTCGTAGAGGCACTTGCCGTTGCGGTAGCACTTGCAGCTCTTCTGGAAGT
+TTATGTTGCAGTTGAACTGGCGGTAGATTAAGATGCGTATCTCGCGGTTGTAGTCGATGCTCTCGTGGGGGGGGTAGAA
+GAGTGAGCACTGTAGGCTTCCGCCGCATAGTCCCTCCTGGTCGCATAAGCATGACTGCTGGGGGTCGTACTAGAAGATC
+TCCTTGCGGTGTCCGAGGATCGGTCGCTGCTAGTCGCAGTTGCAGTTGCTCTGTAAGTGTCCCTAGAGCTTGAAGTGTA
+GGTTGCACGTGAGGGTGATCTGGCGGGTGTAGGTGAGGCTGCACTGTCCGTCGCAGAAGCACGGTATGTGTGCGCGTCC
+GTGGATGTTCGGGTTCGGGTGGTAGCCGCACTTCTCCTTGCGGGTGCAGAAGATCTTGCGCTCGAGGTCGGTTGA&quot;))
+</code></pre>
+<p>将数据进⾏ DNA 解码，得到</p>
+<p><code>KVEEQRSCI5DVKVSXKZEUQS2FJBKE2WKKGI2EKNCWJFCUQNSKIVAVINBTKVKE2TZUKVHUWRZWGRIVSVS NJZJFIQKNIZLDINKHJQ2FSQKWJVBUSTSIKFLVMSKFKNFEGVZVKVGEMSJWJMZDMVSTJNDUQQSGI5KEYN 2LKY2DETKWK5EEQTSCGJDFMU2IJA3ECTKVKVNEWU2CIFGUYVKBIRJEMRSRINKE2TKGKAZU6M2UJVAVA USLKFDFMRKGJFMDITR5</code></p>
+<p>接下来就是编码套娃，按下⾯顺序解即可 (base32-rot13-base32-base85-base58-base62)<br />
+<a target="_blank" rel="noopener" href="https://postimg.cc/rDVM18Zq"><img loading="lazy" data-src="https://i.postimg.cc/x1H8S8KN/QQ20241113-111122.png" alt="QQ20241113-111122.png" /></a></p>
+<div class="tags"><a href="/tags/%E7%BA%BF%E4%B8%8A%E8%B5%9B/" rel="tag"><i class="ic i-tag"></i>线上赛</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i></span><span class="text">更新于</span><time title="修改时间：2024-11-13 11:12:50" itemprop="dateModified" datetime="2024-11-13T11:12:50+08:00">2024-11-13</time></span></div><div class="reward"><button><i class="ic i-heartbeat"></i>赞赏</button><p>请我喝[茶]~(￣▽￣)~*</p><div id="qr"><div><img loading="lazy" data-src="/assets/wechatpay.png" alt="甘蔗 微信支付"/><p>微信支付</p></div><div><img loading="lazy" data-src="/assets/alipay.png" alt="甘蔗 支付宝"/><p>支付宝</p></div></div></div><div id="copyright"><ul><li class="author"><strong>本文作者：</strong>甘蔗<i class="ic i-at"><em>@</em></i>Sugarcane</li><li class="link"><strong>本文链接：</strong><a href="http://example.com/2024/10/25/%E7%BA%BF%E4%B8%8A%E8%B5%9B/YLCTF2024/" title="YLCTF2024">http://example.com/2024/10/25/线上赛/YLCTF2024/</a></li><li class="license"><strong>版权声明：</strong>本站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/2024/07/14/Sui%E5%AD%A6%E4%B9%A0/GitHub%E6%8F%90%E4%BA%A4PR/" rel="prev" itemprop="url" title="GitHub提交PR" style="background-image: linear-gradient(to bottom right, #f8b8b1, #e8eabf);"><span class="type">上一篇</span><span class="category"><i class="ic i-flag"></i>Sui学习</span><h3>GitHub提交PR</h3></a></div><div class="item right"><a href="/2024/11/18/%E5%AE%89%E6%81%92%E6%9D%AF/2024%E5%B9%B4%E2%80%9C%E5%AE%89%E6%81%92%E6%9D%AF%E2%80%9D/" rel="next" itemprop="url" title="2024年安恒杯" style="background-image: linear-gradient(to bottom right, #eda3dc, #dddc86);"><span class="type">下一篇</span><span class="category"><i class="ic i-flag"></i>安恒杯</span><h3>2024年安恒杯</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2024ylctf-wp-misc%E7%AF%87"><span class="toc-number">1.</span> <span class="toc-text"> 2024YLCTF WP MISC 篇</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#round-1"><span class="toc-number">1.1.</span> <span class="toc-text"> Round 1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%8C%E9%BE%9F%E5%AD%90%E5%95%A6"><span class="toc-number">1.1.1.</span> <span class="toc-text"> 乌⻳⼦啦</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hide_png"><span class="toc-number">1.1.2.</span> <span class="toc-text"> hide_png</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#plain_crack"><span class="toc-number">1.1.3.</span> <span class="toc-text"> plain_crack</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pngorzip"><span class="toc-number">1.1.4.</span> <span class="toc-text"> pngorzip</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#whatmusic"><span class="toc-number">1.1.5.</span> <span class="toc-text"> whatmusic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#trafficdet"><span class="toc-number">1.1.6.</span> <span class="toc-text"> trafficdet</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sincostan"><span class="toc-number">1.1.7.</span> <span class="toc-text"> SinCosTan</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#round-2"><span class="toc-number">1.2.</span> <span class="toc-text"> Round 2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BB%B4%E7%AD%94%E6%BB%B4"><span class="toc-number">1.2.1.</span> <span class="toc-text"> 滴答滴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AC~"><span class="toc-number">1.2.2.</span> <span class="toc-text"> 听～</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#trace"><span class="toc-number">1.2.3.</span> <span class="toc-text"> Trace</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#imgai"><span class="toc-number">1.2.4.</span> <span class="toc-text"> IMGAI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#liteos"><span class="toc-number">1.2.5.</span> <span class="toc-text"> LiteOS</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#round-3"><span class="toc-number">1.3.</span> <span class="toc-text"> Round 3</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#blackdoor"><span class="toc-number">1.3.1.</span> <span class="toc-text"> Blackdoor</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tinted"><span class="toc-number">1.3.2.</span> <span class="toc-text"> Tinted</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#figure"><span class="toc-number">1.3.3.</span> <span class="toc-text"> figure</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#checkimg"><span class="toc-number">1.3.4.</span> <span class="toc-text"> CheckImg</span></a></li></ol></li></ol></li></ol></div><div class="related panel pjax" data-title="系列文章"><ul><li  class="active"><a href="/2024/10/25/%E7%BA%BF%E4%B8%8A%E8%B5%9B/YLCTF2024/" rel="bookmark" title="YLCTF2024">YLCTF2024</a></li><li ><a href="/2024/11/18/%E7%BA%BF%E4%B8%8A%E8%B5%9B/SHCTF/" rel="bookmark" title="SHCTF">SHCTF</a></li><li ><a href="/2024/11/18/%E7%BA%BF%E4%B8%8A%E8%B5%9B/BaseCTF/" rel="bookmark" title="BaseCTF">BaseCTF</a></li><li ><a href="/2024/11/18/%E7%BA%BF%E4%B8%8A%E8%B5%9B/SICTF%20Round4/" rel="bookmark" title="SICTF Round4">SICTF Round4</a></li></ul></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="image" loading="lazy" decoding="async" itemprop="image" alt="甘蔗" src="/assets/avatar.jpg"/><p class="name" itemprop="name">甘蔗</p><div class="description" itemprop="description">甘蔗🐭🐭的小破站，记录自己的生活~</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">12</span><span class="name">文章</span></a></div><div class="item categories"><a href="/categories/"><span class="count">7</span><span class="name">分类</span></a></div><div class="item tags"><a href="/tags/"><span class="count">7</span><span class="name">标签</span></a></div></nav><div class="social"><a target="_blank" rel="noopener" href="https://github.com/sugarcanecat" class="item github" title="https:&#x2F;&#x2F;github.com&#x2F;sugarcanecat"><i class="ic i-github"></i></a><a target="_blank" rel="noopener" href="https://www.youtube.com/@sugarcanecat" class="item youtube" title="https:&#x2F;&#x2F;www.youtube.com&#x2F;@sugarcanecat"><i class="ic i-youtube"></i></a><a target="_blank" rel="noopener" href="https://www.instagram.com/sugarcane3at/" class="item instagram" title="https:&#x2F;&#x2F;www.instagram.com&#x2F;sugarcane3at&#x2F;"><i class="ic i-instagram"></i></a></div><div class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li></div></div></div></div><ul id="quick"><li class="prev pjax"><a href="/2024/11/18/%E5%AE%89%E6%81%92%E6%9D%AF/2024%E5%B9%B4%E2%80%9C%E5%AE%89%E6%81%92%E6%9D%AF%E2%80%9D/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/2024/07/14/Sui%E5%AD%A6%E4%B9%A0/GitHub%E6%8F%90%E4%BA%A4PR/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"><a href="/categories/%E7%BA%A2%E6%98%8E%E8%B0%B7%E6%9D%AF/" title="分类于红明谷杯">红明谷杯</a></div><span><a href="/2024/04/03/%E7%BA%A2%E6%98%8E%E8%B0%B7%E6%9D%AF/%E7%BA%A2%E6%98%8E%E8%B0%B7%E6%9D%AF-2024/">2024红明谷杯</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E6%88%91%E6%89%80%E7%83%AD%E7%88%B1%E7%9A%84/" title="分类于我所热爱的">我所热爱的</a></div><span><a href="/2024/06/29/%E6%88%91%E6%89%80%E7%83%AD%E7%88%B1%E7%9A%84/GBC-%E4%B8%80%E6%AC%A1%E9%9A%BE%E5%BF%98%E7%9A%84%E8%BF%BD%E7%95%AA%E7%BB%8F%E5%8E%86/">GIRLS BAND CRY</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E5%AE%89%E6%81%92%E6%9D%AF/" title="分类于安恒杯">安恒杯</a></div><span><a href="/2024/11/18/%E5%AE%89%E6%81%92%E6%9D%AF/2024%E5%B9%B4%E2%80%9C%E5%AE%89%E6%81%92%E6%9D%AF%E2%80%9D/">2024年安恒杯</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/hgame%E6%AF%94%E8%B5%9B/" title="分类于hgame比赛">hgame比赛</a></div><span><a href="/2024/11/18/hgame%E6%AF%94%E8%B5%9B/hgame2024-week1/">hgame比赛-week1</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%BA%BF%E4%B8%8A%E8%B5%9B/" title="分类于线上赛">线上赛</a></div><span><a href="/2024/11/18/%E7%BA%BF%E4%B8%8A%E8%B5%9B/BaseCTF/">BaseCTF</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Sui%E5%AD%A6%E4%B9%A0/" title="分类于Sui学习">Sui学习</a></div><span><a href="/2024/07/14/Sui%E5%AD%A6%E4%B9%A0/GitHub%E6%8F%90%E4%BA%A4PR/">GitHub提交PR</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%BA%BF%E4%B8%8A%E8%B5%9B/" title="分类于线上赛">线上赛</a></div><span><a href="/2024/10/25/%E7%BA%BF%E4%B8%8A%E8%B5%9B/YLCTF2024/">YLCTF2024</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%BA%BF%E4%B8%8A%E8%B5%9B/" title="分类于线上赛">线上赛</a></div><span><a href="/2024/11/18/%E7%BA%BF%E4%B8%8A%E8%B5%9B/SICTF%20Round4/">SICTF Round4</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" title="分类于网络安全">网络安全</a></div><span><a href="/2023/11/06/Web/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E5%9F%B9%E8%AE%AD/">记录一次培训</a></span></li><li class="item"><div class="breadcrumb"><a href="/categories/Sui%E5%AD%A6%E4%B9%A0/" title="分类于Sui学习">Sui学习</a></div><span><a href="/2024/07/13/Sui%E5%AD%A6%E4%B9%A0/letsmove/">letsmove-task1</a></span></li></ul></div><div class="rpost pjax"><h2>最新评论</h2><ul class="leancloud-recent-comment" id="new-comment"></ul></div></div><div class="status"><div class="copyright">&copy; 2022 -<span itemprop="copyrightYear">2024</span><span class="with-love"><i class="ic i-sakura rotate"></i></span><span class="author" itemprop="copyrightHolder">甘蔗 @ 甘蔗の农场园</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i></span><span title="站点总字数">67k 字</span><span class="post-meta-divider"> | </span><span class="post-meta-item-icon"><i class="ic i-coffee"></i></span><span title="站点阅读时长">1:01</span></div><div class="powered-by">基于 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & Theme.<a target="_blank" rel="noopener" href="https://github.com/theme-shoka-x/hexo-theme-shokaX/">ShokaX</a></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL = {
+    ispost: true,
+        path: `2024/10/25/线上赛/YLCTF2024/`,
+        favicon: {
+        show: `（●´3｀●）やれやれだぜ`,
+        hide: `(´Д｀)大変だ！`
+    },
+    search: {
+        placeholder: "文章搜索",
+        empty: "关于 「 ${query} 」，什么也没搜到",
+        stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    copy_tex: false,
+    katex: false,
+    mermaid: false,
+    audio: undefined,
+    fancybox: true,
+    nocopy: false,
+    outime: true,
+    template: `<div class="note warning"><p><span class="label warning">文章时效性提示</span><br>这是一篇发布于 {{publish}} 天前，最后一次更新在 {{updated}} 天前的文章，部分信息可能已经发生改变，请注意甄别。</p></div>`,
+    quiz: {
+        choice: `单选题`,
+        multiple: `多选题`,
+        true_false: `判断题`,
+        essay: `问答题`,
+        gap_fill: `填空题`,
+        mistake: `错题备注`
+    },
+    ignores: [
+        (uri) => uri.includes('#'),
+        (uri) => new RegExp(LOCAL.path + '$').test(uri),
+            []
+    ]
+};
+</script><script src="https://s4.zstatic.net/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous" fetchpriority="high"></script><script src="https://s4.zstatic.net/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO&#x2F;+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn&#x2F;6Z&#x2F;hRTt8+pR6L4N2" crossorigin="anonymous" fetchpriority="high"></script><script src="/js/siteInit.js?v=0.4.14" type="module" fetchpriority="high" defer></script></body></html>
