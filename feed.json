@@ -95,6 +95,17 @@
             ]
         },
         {
+            "id": "http://example.com/2024/10/06/%E7%BA%BF%E4%B8%8A%E8%B5%9B/0xGame/",
+            "url": "http://example.com/2024/10/06/%E7%BA%BF%E4%B8%8A%E8%B5%9B/0xGame/",
+            "title": "0xGame",
+            "date_published": "2024-10-05T16:00:00.000Z",
+            "content_html": "<h1 id=\"0xgame2024\"><a class=\"anchor\" href=\"#0xgame2024\">#</a> 0xGame2024</h1>\n<blockquote>\n<p>搬运的官方 WP（部分）</p>\n</blockquote>\n<h2 id=\"misc\"><a class=\"anchor\" href=\"#misc\">#</a> MISC</h2>\n<h3 id=\"加密的压缩包\"><a class=\"anchor\" href=\"#加密的压缩包\">#</a> 加密的压缩包？</h3>\n<p>⽤ 010editor 查看，压缩包末尾给了⼀个 password，可知这个压缩包原本应该是被加密了的。</p>\n<p>但是从 加密标识位（下图选中部分）来看，这⾥是被设置成了未加密，因此这⾥其实是个<strong>伪不加密</strong>。<br />\n<a href=\"https://postimg.cc/WdQMZrX5\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/GppzZxYn/QQ20241120-102128.png\" alt=\"QQ20241120-102128.png\" /></a><br />\n<a href=\"https://postimg.cc/nsBqGzWp\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/R0bG9JQ6/QQ20241120-102222.png\" alt=\"QQ20241120-102222.png\" /></a><br />\n 将加密位改为 09 以后保存，输⼊密码 0xGame2024 即可解压<br />\n<a href=\"https://postimg.cc/Kk5LCWFW\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/NM342hnQ/QQ20241120-102338.png\" alt=\"QQ20241120-102338.png\" /></a></p>\n<h2 id=\"blockchain\"><a class=\"anchor\" href=\"#blockchain\">#</a> Blockchain</h2>\n<h3 id=\"肘上链\"><a class=\"anchor\" href=\"#肘上链\">#</a> 肘，上链！</h3>\n<blockquote>\n<p>此题可以参考这一题：<a href=\"https://blog.csdn.net/Nanian233/article/details/134053768\">https://blog.csdn.net/Nanian233/article/details/134053768</a></p>\n</blockquote>\n<ol>\n<li>先 nc 创建账户<br />\n<a href=\"https://postimg.cc/BXR873H6\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/Njj1Mf01/QQ20241120-102604.png\" alt=\"QQ20241120-102604.png\" /></a></li>\n<li>拿给的账号去⽔⻰头上接⼀下⽔（接水的地址题目会给）<br />\n<a href=\"https://postimg.cc/k6RzcxmD\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/260YCw9d/QQ20241120-102705.png\" alt=\"QQ20241120-102705.png\" /></a></li>\n<li>部署题⽬合约<br />\n<a href=\"https://postimg.cc/6yXgr215\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/FsdvQ0yc/QQ20241120-102756.png\" alt=\"QQ20241120-102756.png\" /></a></li>\n<li></li>\n</ol>\n",
+            "tags": [
+                "线上赛",
+                "线上赛"
+            ]
+        },
+        {
             "id": "http://example.com/2024/07/14/Sui%E5%AD%A6%E4%B9%A0/GitHub%E6%8F%90%E4%BA%A4PR/",
             "url": "http://example.com/2024/07/14/Sui%E5%AD%A6%E4%B9%A0/GitHub%E6%8F%90%E4%BA%A4PR/",
             "title": "GitHub提交PR",
