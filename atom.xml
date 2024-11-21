@@ -1966,7 +1966,34 @@ GTGGATGTTCGGGTTCGGGTGGTAGCCGCACTTCTCCTTGCGGGTGCAGAAGATCTTGCGCTCGAGGTCGGTTGA&amp;
 &lt;a href=&#34;https://postimg.cc/k6RzcxmD&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/260YCw9d/QQ20241120-102705.png&#34; alt=&#34;QQ20241120-102705.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;部署题⽬合约&lt;br /&gt;
 &lt;a href=&#34;https://postimg.cc/6yXgr215&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/FsdvQ0yc/QQ20241120-102756.png&#34; alt=&#34;QQ20241120-102756.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;/li&gt;
+&lt;li&gt;打开 metamask（⼀个浏览器插件），如下图连接到 RPC，其中链 ID 随便填⼀个它就会告诉你正确的链 ID&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/KKxsCPG4&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/ZqdtBHXP/QQ20241121-101856.png&#34; alt=&#34;QQ20241121-101856.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;切换到该⽹络，拿⾃⼰的账⼾也去⽔⻰头上接⼀下⽔&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/cKh5WvCh&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/fLQ4xXhG/QQ20241121-101953.png&#34; alt=&#34;QQ20241121-101953.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;获取⼀下题⽬合约&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/gnhSJSrn&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/HsZf6Fg4/QQ20241121-101856.png&#34; alt=&#34;QQ20241121-101856.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;打开&lt;a href=&#34;https://remix.ethereum.org/&#34;&gt; remix&lt;/a&gt;，这⾥新建⼀个⽂件，把题⽬合约复制过去，这里 remix 的操作不会的可以参考 CSDN 的博客内容。&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/2qynqyT2&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/5tqgRFzd/QQ20241121-102157.png&#34; alt=&#34;QQ20241121-102157.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;选择相应的版本，编译合约&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/9RqTpk69&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/d15BqPn5/QQ20241121-102320.png&#34; alt=&#34;QQ20241121-102320.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Environment&lt;/strong&gt; 中选择&lt;strong&gt; Injected Provider - MetaMask&lt;/strong&gt;，注意&lt;strong&gt; metamask&lt;/strong&gt; 的⼩窗⼝要点开看⼀下是否连接成功&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/3Wmm0PC5&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/dQSBpFh1/QQ20241121-102409.png&#34; alt=&#34;QQ20241121-102409.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;将前⾯ nc 时给的合约地址复制过来到&lt;strong&gt; At Address&lt;/strong&gt; ⾥⾯，点击&lt;strong&gt; At Address&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/94swrpDQ&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/V6kqZZ1n/QQ20241121-102457.png&#34; alt=&#34;QQ20241121-102457.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;题⽬的合约代码很简单，要求传的值需要与&lt;strong&gt; Hello0xBlockchain&lt;/strong&gt; 的 &lt;code&gt;keccak256&lt;/code&gt;  哈希值相同，这⾥⽤ web3py 计算⼀下，或者在线网站计算一下都可以。&lt;pre&gt;&lt;code&gt;from web3 import Web3
+s=b&amp;quot;Hello0xBlockchain&amp;quot;
+w3 = Web3()
+hash_bytes = w3.keccak(s)
+hash_hex = hash_bytes.hex()
+print(hash_hex)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;得到的结果复制到 sign ⾥⾯，前⾯记得加上 0x，然后点击 sign，中间有个交易的对话框，确认⼀下&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/RWkn0d6V&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/fbL7BgMX/QQ20241121-102719.png&#34; alt=&#34;QQ20241121-102719.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;点击 &lt;code&gt;isSolved&lt;/code&gt; ，看到值已经返回了&lt;strong&gt; true&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/0Kyz4H3Z&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/j2zyLphV/QQ20241121-102815.png&#34; alt=&#34;QQ20241121-102815.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;回到&lt;strong&gt; nc&lt;/strong&gt; 那边，&lt;strong&gt;get flag&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/ftwy3rwZ&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/bJntB7WG/QQ20241121-102900.png&#34; alt=&#34;QQ20241121-102900.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </content>
         <category term="线上赛" scheme="http://example.com/categories/%E7%BA%BF%E4%B8%8A%E8%B5%9B/" />
