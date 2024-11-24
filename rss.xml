@@ -2011,7 +2011,9 @@ print(hash_hex)
             <category term="GitHub" scheme="http://example.com/tags/GitHub/" />
             <pubDate>Sun, 14 Jul 2024 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;用git实现github的pull-requests提交&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#用git实现github的pull-requests提交&#34;&gt;#&lt;/a&gt; 用 GIt 实现 GitHub 的 Pull requests 提交&lt;/h1&gt;
+&lt;blockquote&gt;
 &lt;p&gt;参考作者：&lt;a href=&#34;https://blog.csdn.net/not_found77/article/details/139867915&#34;&gt;Elemen_7&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;安装git工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装git工具&#34;&gt;#&lt;/a&gt; 安装 Git 工具&lt;/h2&gt;
 &lt;p&gt;这一步有很多教程，百度一下即可。&lt;/p&gt;
 &lt;h2 id=&#34;开始&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#开始&#34;&gt;#&lt;/a&gt; 开始&lt;/h2&gt;
@@ -2090,10 +2092,14 @@ print(hash_hex)
             <category term="Sui" scheme="http://example.com/tags/Sui/" />
             <pubDate>Sat, 13 Jul 2024 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;letsmove-task1&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#letsmove-task1&#34;&gt;#&lt;/a&gt; letsmove-task1&lt;/h1&gt;
-&lt;p&gt;记录 GitHub 上《letsmove》项目的学习经历&lt;br /&gt;
-文章参考作者：&lt;br /&gt;
+&lt;blockquote&gt;
+&lt;p&gt;记录 GitHub 上《letsmove》项目的学习经历&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;文章参考作者：&lt;br /&gt;
 Alva(&lt;a href=&#34;https://learnblockchain.cn/people/18887&#34;&gt;https://learnblockchain.cn/people/18887&lt;/a&gt;)&lt;br /&gt;
 Elemen(&lt;a href=&#34;https://404ll.github.io/&#34;&gt;https://404ll.github.io/&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;前置资料&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前置资料&#34;&gt;#&lt;/a&gt; 前置资料&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;入门书籍（中文版）&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;-[轻松入门 Sui]: &lt;a href=&#34;https://easy.sui-book.com/chapter_1.html&#34;&gt;https://easy.sui-book.com/chapter_1.html&lt;/a&gt;&lt;/p&gt;
@@ -2106,7 +2112,9 @@ Elemen(&lt;a href=&#34;https://404ll.github.io/&#34;&gt;https://404ll.github.io/
 &lt;p&gt;&lt;strong&gt;Sui - 官方知识库（github)&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;-[github]: &lt;a href=&#34;https://github.com/move-cn/movesui&#34;&gt;https://github.com/move-cn/movesui&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;sui-cli-基本操作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#sui-cli-基本操作&#34;&gt;#&lt;/a&gt; Sui Cli 基本操作&lt;/h2&gt;
+&lt;blockquote&gt;
 &lt;p&gt;参照文档：&lt;a href=&#34;https://docs.sui.io/references/cli/client&#34;&gt;Sui CLI: Client&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;网络&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#网络&#34;&gt;#&lt;/a&gt; 网络&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;查看当前添加的网络列表&lt;br /&gt;
